@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>
+moving img
+</title>
+<style>
+body{
+ background-color:red;
+}
+
+</style>
+<script>
+var ml=0;
+var x;
+var d,y;
+function fun(){
+	x=document.getElementById("image");
+	
+	var interval=setInterval(fun1,100);
+	
+}
+function fun1(){
+	y=document.getElementById("image").offsetLeft;
+	document.getElementById("k1").innerHTML=y;
+	if(y>=718){
+		d="l";
+	}
+	if(y<=18){
+		d="r";
+	}
+	if(d=="r"){
+		ml=ml+5;
+	}
+	else{
+		ml=ml-5;
+	}
+	x.style.marginLeft=ml+"px";
+
+	
+}
+
+</script>
+</head>
+<body >
+
+<img id="image" onclick="fun()" src="shiva.jpg" width="600px" height="500px">
+<p id="k1"></p>
+</body>
+</html>
